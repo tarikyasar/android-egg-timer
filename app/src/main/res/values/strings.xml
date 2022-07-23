@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Egg Timer</string>
+    <string name="timer">06:00</string>
+    <string name="start">Start</string>
+    <string name="reset">Reset</string>
+    <string name="soft">Soft</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+</resources>

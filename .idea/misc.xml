@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/bg_radio_button_discount_type_not_selected_left.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bg_radio_button_discount_type_not_selected_middle.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bg_radio_button_discount_type_not_selected_right.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bg_radio_button_discount_type_selected_left.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bg_radio_button_discount_type_selected_middle.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bg_radio_button_discount_type_selected_right.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bg_radio_button_discount_type_selector_left.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bg_radio_button_discount_type_selector_middle.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bg_radio_button_discount_type_selector_right.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bg_radio_button_type_not_selected_left.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bg_radio_button_type_not_selected_middle.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bg_radio_button_type_not_selected_right.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bg_radio_button_type_selected_left.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bg_radio_button_type_selected_middle.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bg_radio_button_type_selector_left.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bg_radio_button_type_selector_middle.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bg_radio_button_type_selector_right.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.21024258760107817" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.154" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.154" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
