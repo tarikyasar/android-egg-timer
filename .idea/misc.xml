@@ -20,7 +20,9 @@
         <entry key="app/src/main/res/drawable/bg_radio_button_type_selector_left.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/bg_radio_button_type_selector_middle.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/bg_radio_button_type_selector_right.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/rounded_corner.xml" value="0.154" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.21024258760107817" />
+        <entry key="app/src/main/res/layout/custom_alert_dialog.xml" value="0.5955337524414063" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.154" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.154" />
       </map>

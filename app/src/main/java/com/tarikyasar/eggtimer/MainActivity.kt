@@ -1,9 +1,13 @@
 package com.tarikyasar.eggtimer
 
+import android.app.AlertDialog
+import android.media.AudioManager
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.text.InputFilter
+import android.widget.Button
 import com.borutsky.neumorphism.NeumorphicFrameLayout
 import com.tarikyasar.eggtimer.databinding.ActivityMainBinding
 import java.text.SimpleDateFormat
@@ -18,11 +22,28 @@ class MainActivity : AppCompatActivity() {
     private var cookTime = eggMap[EggCookTypes.MEDIUM_BOILED]!!
     private lateinit var binding: ActivityMainBinding
     private lateinit var timer: CountDownTimer
+    private lateinit var mediaPlayer: MediaPlayer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        mediaPlayer = MediaPlayer.create(this@MainActivity, R.raw.alarm_sound)
+        mediaPlayer.isLooping = true
+
+        // Create custom alert dialog
+        val builder = AlertDialog.Builder(
+            this@MainActivity,
+            R.style.CustomAlertDialog
+        ).create()
+        val view = layoutInflater.inflate(R.layout.custom_alert_dialog, null)
+        val button = view.findViewById<NeumorphicFrameLayout>(R.id.buttonClose)
+        builder.setView(view)
+        button.setOnClickListener {
+            builder.dismiss()
+            mediaPlayer.stop()
+        }
+        builder.setCanceledOnTouchOutside(false)
 
         binding.buttonStart.setOnClickListener {
             if (binding.buttonStart.state != NeumorphicFrameLayout.State.PRESSED) {
@@ -32,7 +53,8 @@ class MainActivity : AppCompatActivity() {
                     }
 
                     override fun onFinish() {
-                        //TODO: Add notification
+                        builder.show()
+                        mediaPlayer.start()
                     }
                 }
 
@@ -54,19 +76,18 @@ class MainActivity : AppCompatActivity() {
                 R.id.radioButtonSoftCooked -> {
                     cookTime = eggMap[EggCookTypes.SOFT_BOILED]!!
                     binding.tvTimer.text = formatTime(cookTime * 60000)
-                    resetTimer()
                 }
                 R.id.radioButtonMediumCooked -> {
                     cookTime = eggMap[EggCookTypes.MEDIUM_BOILED]!!
                     binding.tvTimer.text = formatTime(cookTime * 60000)
-                    resetTimer()
                 }
                 R.id.radioButtonHardCooked -> {
                     cookTime = eggMap[EggCookTypes.HARD_BOILED]!!
                     binding.tvTimer.text = formatTime(cookTime * 60000)
-                    resetTimer()
                 }
             }
+
+            resetTimer()
         }
     }
 
@@ -82,7 +103,7 @@ class MainActivity : AppCompatActivity() {
             timer.cancel()
             binding.buttonStop.state = NeumorphicFrameLayout.State.PRESSED
             binding.buttonStart.state = NeumorphicFrameLayout.State.CONVEX
-            binding.tvTimer.text = formatTime(cookTime*60000)
+            binding.tvTimer.text = formatTime(cookTime * 60000)
         }
     }
 

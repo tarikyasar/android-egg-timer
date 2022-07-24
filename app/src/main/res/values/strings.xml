@@ -6,4 +6,6 @@
     <string name="soft">Soft</string>
     <string name="medium">Medium</string>
     <string name="hard">Hard</string>
+    <string name="close">Close</string>
+    <string name="egg_ready">Your egg is ready.</string>
 </resources>

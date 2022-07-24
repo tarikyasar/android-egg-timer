@@ -11,5 +11,6 @@
     <color name="color_stop_button">#FF5456</color>
     <color name="color_selected_option">@color/color_start_button</color>
     <color name="color_background">#EFEAD8</color>
+    <color name="color_text">#003232</color>
     <color name="color_background_darker">#DFDBD0</color>
 </resources>
