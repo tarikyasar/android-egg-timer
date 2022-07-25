@@ -2,7 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="300dp"
     android:layout_height="240dp"
-    android:background="@color/color_background"
+    android:background="?attr/colorSurface"
     android:paddingVertical="20dp"
     android:orientation="vertical">
 
@@ -12,7 +12,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:text="@string/egg_ready"
-        android:textColor="@color/color_text"
+        android:textColor="?attr/colorOnSurface"
         android:textSize="28sp" />
 
     <com.borutsky.neumorphism.NeumorphicFrameLayout
@@ -22,17 +22,17 @@
         android:layout_gravity="center"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="20dp"
-        app:background_color="@color/color_stop_button"
+        app:background_color="?attr/colorSurface"
         app:corner_radius="10dp"
         app:shape="rectangle"
-        app:state="concave">
+        app:state="convex">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/close"
-            android:textColor="@color/color_text"
+            android:textColor="?attr/colorOnSurface"
             android:textSize="24sp" />
 
     </com.borutsky.neumorphism.NeumorphicFrameLayout>

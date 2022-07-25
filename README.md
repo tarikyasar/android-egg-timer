@@ -6,4 +6,7 @@ Egg Timer is an entirely new, complex, and groundbreaking application which allo
 
 ## Screenshots
 
-![Alt text](/screenshots/screenshot.jpg "Sccrenshot")
+<div>
+<img src="/screenshots/screenshot_light.jpg" width="300">
+<img src="/screenshots/screenshot_dark.jpg" width="300">
+</div>

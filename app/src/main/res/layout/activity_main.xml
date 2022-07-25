@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_background"
+    android:background="?attr/colorSurface"
     android:clipChildren="false"
     tools:context=".MainActivity">
 
@@ -15,7 +15,7 @@
         android:layout_marginTop="80dp"
         android:clipChildren="false"
         android:text="Hello World!"
-        app:background_color="@color/color_background"
+        app:background_color="?attr/colorSurface"
         app:corner_radius="40dp"
         app:layout_constraintBottom_toTopOf="@+id/llButtons"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -28,7 +28,7 @@
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
-            app:background_color="@color/color_background"
+            app:background_color="?attr/colorSurface"
             app:shape="circle"
             app:state="pressed">
 
@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/timer"
-                android:textColor="@color/color_text"
+                android:textColor="?attr/colorOnSurface"
                 android:textSize="36sp" />
 
         </com.borutsky.neumorphism.NeumorphicFrameLayout>
@@ -62,17 +62,17 @@
             android:layout_width="140dp"
             android:layout_height="80dp"
             android:layout_marginHorizontal="10dp"
-            app:background_color="@color/color_stop_button"
+            app:background_color="?attr/colorSurface"
             app:corner_radius="10dp"
-            app:shape="rectangle"
-            app:state="pressed">
+            app:shape="circle"
+            app:state="concave">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/reset"
-                android:textColor="@color/color_text"
+                android:textColor="?attr/colorOnSurface"
                 android:textSize="20sp" />
 
         </com.borutsky.neumorphism.NeumorphicFrameLayout>
@@ -82,17 +82,17 @@
             android:layout_width="140dp"
             android:layout_height="80dp"
             android:layout_marginHorizontal="10dp"
-            app:background_color="@color/color_start_button"
+            app:background_color="?attr/colorSurface"
             app:corner_radius="10dp"
-            app:shape="rectangle"
-            app:state="flat">
+            app:shape="circle"
+            app:state="convex">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/start"
-                android:textColor="@color/color_text"
+                android:textColor="?attr/colorOnSurface"
                 android:textSize="20sp" />
 
         </com.borutsky.neumorphism.NeumorphicFrameLayout>
@@ -105,7 +105,7 @@
         android:layout_height="80dp"
         android:layout_marginHorizontal="20dp"
         android:layout_marginBottom="20dp"
-        app:background_color="@color/color_background"
+        app:background_color="?attr/colorSurface"
         app:corner_radius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -129,7 +129,7 @@
                 android:checked="false"
                 android:gravity="center"
                 android:paddingVertical="18dp"
-                android:textColor="@color/color_text"
+                android:textColor="?attr/colorOnSurface"
                 android:text="@string/soft"
                 android:textSize="20sp" />
 
@@ -143,7 +143,7 @@
                 android:gravity="center"
                 android:paddingVertical="18dp"
                 android:text="@string/medium"
-                android:textColor="@color/color_text"
+                android:textColor="?attr/colorOnSurface"
                 android:textSize="20sp" />
 
             <RadioButton
@@ -156,7 +156,7 @@
                 android:gravity="center"
                 android:paddingVertical="18dp"
                 android:text="@string/hard"
-                android:textColor="@color/color_text"
+                android:textColor="?attr/colorOnSurface"
                 android:textSize="20sp" />
 
         </RadioGroup>
