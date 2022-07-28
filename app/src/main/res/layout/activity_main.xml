@@ -59,7 +59,7 @@
 
         <com.borutsky.neumorphism.NeumorphicFrameLayout
             android:id="@+id/buttonStop"
-            android:layout_width="140dp"
+            android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginHorizontal="10dp"
             app:background_color="?attr/colorSurface"
@@ -79,7 +79,7 @@
 
         <com.borutsky.neumorphism.NeumorphicFrameLayout
             android:id="@+id/buttonStart"
-            android:layout_width="140dp"
+            android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginHorizontal="10dp"
             app:background_color="?attr/colorSurface"
@@ -106,6 +106,7 @@
         android:layout_marginBottom="40dp"
         android:elevation="24dp"
         android:orientation="horizontal"
+        android:gravity="center_horizontal"
         app:background_color="?attr/colorSurface"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -113,8 +114,8 @@
 
         <RadioButton
             android:id="@+id/radioButtonSoftCooked"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:background="@drawable/bg_radio_button_type_selector_left"
             android:button="@android:color/transparent"
             android:checked="false"
@@ -123,13 +124,13 @@
             android:paddingVertical="18dp"
             android:text="@string/soft"
             android:textColor="?attr/colorOnSurface"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/radioButtonMediumCooked"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginHorizontal="8dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="16dp"
             android:background="@drawable/bg_radio_button_type_selector_middle"
             android:button="@android:color/transparent"
             android:checked="true"
@@ -138,12 +139,12 @@
             android:paddingVertical="18dp"
             android:text="@string/medium"
             android:textColor="?attr/colorOnSurface"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/radioButtonHardCooked"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:background="@drawable/bg_radio_button_type_selector_right"
             android:button="@android:color/transparent"
             android:checked="false"
@@ -152,7 +153,7 @@
             android:paddingVertical="18dp"
             android:text="@string/hard"
             android:textColor="?attr/colorOnSurface"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
     </RadioGroup>
 
