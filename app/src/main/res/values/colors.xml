@@ -8,15 +8,16 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="color_start_button">#01A7A7</color>
+    <color name="color_start_button_dark">#005959</color>
     <color name="color_stop_button">#FF5456</color>
     <color name="color_selected_option">@color/color_start_button</color>
+    <color name="color_selected_option_dark">@color/color_start_button_dark</color>
     <!-- Light Mode Colors -->
     <color name="color_background_light">#E8E8E8</color>
-    <color name="color_background_light_2">#E0E0E0</color>
+    <color name="color_background_light_2">#BCBCBC</color>
     <color name="color_text_light">@color/color_background_dark</color>
     <!-- Dark Mode Colors -->
     <color name="color_background_dark">#2E2F39</color>
     <color name="color_background_dark_2">#202127</color>
     <color name="color_text_dark">@color/color_background_light</color>
-
 </resources>

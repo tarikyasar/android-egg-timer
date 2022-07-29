@@ -16,7 +16,7 @@
         <entry key="app/src/main/res/drawable/bg_radio_button_type_not_selected_left.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/bg_radio_button_type_not_selected_middle.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/bg_radio_button_type_not_selected_right.xml" value="0.1" />
-        <entry key="app/src/main/res/drawable/bg_radio_button_type_selected_left.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bg_radio_button_type_selected_left.xml" value="0.20611267089843752" />
         <entry key="app/src/main/res/drawable/bg_radio_button_type_selected_middle.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/bg_radio_button_type_selected_right.xml" value="0.149" />
         <entry key="app/src/main/res/drawable/bg_radio_button_type_selector_left.xml" value="0.1" />

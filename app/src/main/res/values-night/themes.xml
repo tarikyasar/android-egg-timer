@@ -16,5 +16,6 @@
         <item name="colorSurface">@color/color_background_dark</item>
         <item name="colorOnSurface">@color/color_text_dark</item>
         <item name="colorSecondaryContainer">@color/color_background_dark_2</item>
+        <item name="colorAccent">@color/color_start_button_dark</item>
     </style>
 </resources>
