@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+    <testsuite name="fastlane.lanes">
+
+
+        <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000152">
+
+        </testcase>
+
+
+        <testcase classname="fastlane.lanes" name="1: assembleDebug" time="2.771205">
+
+        </testcase>
+
+
+        <testcase classname="fastlane.lanes" name="2: firebase_app_distribution" time="16.67641">
+
+        </testcase>
+
+    </testsuite>
+</testsuites>
