@@ -9,6 +9,7 @@ import android.view.MotionEvent
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.widget.addTextChangedListener
 import com.borutsky.neumorphism.NeumorphicFrameLayout
 import com.tarikyasar.eggtimer.databinding.ActivityMainBinding
 import com.tarikyasar.eggtimer.utils.Constants
@@ -83,7 +84,7 @@ class MainActivity : AppCompatActivity() {
 
                     timer = object : CountDownTimer(cookTime * Constants.DEFAULT_TIME, 1000) {
                         override fun onTick(millisUntilFinished: Long) {
-                            binding.tvTimer.text = TimeUtils.formatTime(millisUntilFinished)
+                            binding.etTimer.setText(TimeUtils.formatTime(millisUntilFinished))
                         }
 
                         override fun onFinish() {
@@ -130,20 +131,33 @@ class MainActivity : AppCompatActivity() {
             when (checkedId) {
                 R.id.radioButtonSoftCooked -> {
                     cookTime = eggMap[EggCookTypes.SOFT_BOILED]!!
-                    binding.tvTimer.text = TimeUtils.formatTime(cookTime * Constants.DEFAULT_TIME)
                 }
                 R.id.radioButtonMediumCooked -> {
                     cookTime = eggMap[EggCookTypes.MEDIUM_BOILED]!!
-                    binding.tvTimer.text = TimeUtils.formatTime(cookTime * Constants.DEFAULT_TIME)
 
                 }
                 R.id.radioButtonHardCooked -> {
                     cookTime = eggMap[EggCookTypes.HARD_BOILED]!!
-                    binding.tvTimer.text = TimeUtils.formatTime(cookTime * Constants.DEFAULT_TIME)
                 }
             }
 
             resetTimer()
+        }
+
+        binding.buttonCustomTimer.setOnClickListener {
+            if (binding.etTimer.hasFocus()) {
+                binding.etTimer.clearFocus()
+                binding.tvCustomTimer.text = getString(R.string.custom)
+            } else {
+                binding.etTimer.requestFocus()
+                binding.tvCustomTimer.text = getString(R.string.set_custom_timer)
+                binding.etTimer.setText("00:00")
+                binding.etTimer.setSelection(binding.etTimer.text.length)
+            }
+        }
+
+        binding.etTimer.addTextChangedListener {
+            println(it)
         }
     }
 
@@ -181,7 +195,7 @@ class MainActivity : AppCompatActivity() {
             timerState = TimerStates.STOPPED
             binding.buttonStop.state = NeumorphicFrameLayout.State.CONCAVE
             binding.buttonStart.state = NeumorphicFrameLayout.State.CONVEX
-            binding.tvTimer.text = TimeUtils.formatTime(cookTime * Constants.DEFAULT_TIME)
+            binding.etTimer.setText(TimeUtils.formatTime(cookTime * Constants.DEFAULT_TIME))
         }
     }
 }

@@ -32,8 +32,8 @@
             app:shape="circle"
             app:state="pressed">
 
-            <TextView
-                android:id="@+id/tvTimer"
+            <EditText
+                android:id="@+id/etTimer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -103,12 +103,11 @@
         android:id="@+id/radioGroupEggCookType"
         android:layout_width="300dp"
         android:layout_height="100dp"
-        android:layout_marginBottom="40dp"
         android:elevation="24dp"
-        android:orientation="horizontal"
         android:gravity="center_horizontal"
+        android:orientation="horizontal"
         app:background_color="?attr/colorSurface"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCustomTimer"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
 
@@ -156,6 +155,31 @@
             android:textSize="18sp" />
 
     </RadioGroup>
+
+    <com.borutsky.neumorphism.NeumorphicFrameLayout
+        android:id="@+id/buttonCustomTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginVertical="10dp"
+        android:paddingHorizontal="20dp"
+        app:background_color="?attr/colorSurface"
+        app:corner_radius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:shape="rectangle"
+        app:state="concave">
+
+        <TextView
+            android:id="@+id/tvCustomTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/custom"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="20sp" />
+
+    </com.borutsky.neumorphism.NeumorphicFrameLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
