@@ -2,8 +2,8 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="oval">
     <gradient
-        android:endColor="?attr/colorAccent"
-        android:gradientRadius="100%p"
-        android:startColor="?attr/colorSecondary"
+        android:endColor="@color/color_start_button_dark"
+        android:gradientRadius="75%p"
+        android:startColor="@color/color_start_button"
         android:type="radial" />
 </shape>

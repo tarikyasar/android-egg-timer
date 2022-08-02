@@ -9,7 +9,6 @@ import android.view.MotionEvent
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.widget.addTextChangedListener
 import com.borutsky.neumorphism.NeumorphicFrameLayout
 import com.tarikyasar.eggtimer.databinding.ActivityMainBinding
 import com.tarikyasar.eggtimer.utils.Constants
@@ -131,33 +130,23 @@ class MainActivity : AppCompatActivity() {
             when (checkedId) {
                 R.id.radioButtonSoftCooked -> {
                     cookTime = eggMap[EggCookTypes.SOFT_BOILED]!!
+                    binding.etTimer.setText(TimeUtils.formatTime(cookTime * Constants.DEFAULT_TIME))
+
                 }
                 R.id.radioButtonMediumCooked -> {
                     cookTime = eggMap[EggCookTypes.MEDIUM_BOILED]!!
+                    binding.etTimer.setText(TimeUtils.formatTime(cookTime * Constants.DEFAULT_TIME))
+
 
                 }
                 R.id.radioButtonHardCooked -> {
                     cookTime = eggMap[EggCookTypes.HARD_BOILED]!!
+                    binding.etTimer.setText(TimeUtils.formatTime(cookTime * Constants.DEFAULT_TIME))
+
                 }
             }
 
             resetTimer()
-        }
-
-        binding.buttonCustomTimer.setOnClickListener {
-            if (binding.etTimer.hasFocus()) {
-                binding.etTimer.clearFocus()
-                binding.tvCustomTimer.text = getString(R.string.custom)
-            } else {
-                binding.etTimer.requestFocus()
-                binding.tvCustomTimer.text = getString(R.string.set_custom_timer)
-                binding.etTimer.setText("00:00")
-                binding.etTimer.setSelection(binding.etTimer.text.length)
-            }
-        }
-
-        binding.etTimer.addTextChangedListener {
-            println(it)
         }
     }
 

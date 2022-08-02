@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="color_start_button">@android:color/system_accent1_300</color>
+    <color name="color_start_button_dark">@android:color/system_accent1_600</color>
+    <color name="color_stop_button">@android:color/system_accent3_100</color>
+    <color name="color_selected_option">@color/color_start_button</color>
+    <color name="color_selected_option_dark">@color/color_start_button_dark</color>
+    <!-- Light Mode Colors -->
+    <color name="color_background_light">@android:color/system_neutral1_100</color>
+    <color name="color_background_light_2">@android:color/system_neutral1_200</color>
+    <color name="color_text_light">@color/color_background_dark</color>
+    <!-- Dark Mode Colors -->
+    <color name="color_background_dark">@android:color/system_neutral1_800</color>
+    <color name="color_background_dark_2">@android:color/system_neutral1_900</color>
+    <color name="color_text_dark">@color/color_background_light</color>
+</resources>
