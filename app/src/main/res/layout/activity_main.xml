@@ -36,9 +36,12 @@
                 android:id="@+id/etTimer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
                 android:layout_gravity="center"
+                android:enabled="false"
+                android:inputType="number"
+                android:maxLength="5"
                 android:text="@string/timer"
-                android:background="@null"
                 android:textColor="?attr/colorOnSurface"
                 android:textSize="36sp" />
 
@@ -108,7 +111,7 @@
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         app:background_color="?attr/colorSurface"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCustomTimer"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
 
@@ -157,6 +160,20 @@
 
     </RadioGroup>
 
-
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonCustomTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:textColor="@color/color_start_button"
+        android:background="@android:color/transparent"
+        android:padding="10dp"
+        android:text="@string/custom"
+        android:textAllCaps="false"
+        android:textSize="26sp"
+        app:corner_radius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

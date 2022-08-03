@@ -9,5 +9,5 @@
     <string name="close">Close</string>
     <string name="custom">Custom</string>
     <string name="set_custom_timer">Set Custom Timer</string>
-    <string name="egg_ready">Your egg is ready.</string>
+    <string name="egg_ready">Your egg is ready!</string>
 </resources>
