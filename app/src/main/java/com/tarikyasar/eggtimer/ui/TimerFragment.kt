@@ -103,7 +103,6 @@ class TimerFragment : Fragment(), TimerCallback {
 
         binding.buttonStart.setOnTouchListener { _, event ->
             if (viewModel.isActive.not()) {
-                println("Aa")
                 viewModel.start(cookTime.toLong())
 
                 if (event?.action == MotionEvent.ACTION_UP) {
@@ -154,7 +153,14 @@ class TimerFragment : Fragment(), TimerCallback {
         binding.timerSlider.addOnChangeListener { _, value, _ ->
             cookTime = value * Constants.DEFAULT_TIME
             binding.tvTimer.text = TimeUtils.formatTime(cookTime.toLong())
+
+            when (value) {
+                4F -> binding.radioGroupEggCookType.check(R.id.radioButtonSoftCooked)
+                6F -> binding.radioGroupEggCookType.check(R.id.radioButtonMediumCooked)
+                12F -> binding.radioGroupEggCookType.check(R.id.radioButtonHardCooked)
+            }
         }
+
     }
 
     override fun onTimerStarted() {
