@@ -154,10 +154,10 @@ class TimerFragment : Fragment(), TimerCallback {
             cookTime = value * Constants.DEFAULT_TIME
             binding.tvTimer.text = TimeUtils.formatTime(cookTime.toLong())
 
-            when (value) {
-                4F -> binding.radioGroupEggCookType.check(R.id.radioButtonSoftCooked)
-                6F -> binding.radioGroupEggCookType.check(R.id.radioButtonMediumCooked)
-                12F -> binding.radioGroupEggCookType.check(R.id.radioButtonHardCooked)
+            when (value * Constants.DEFAULT_TIME) {
+                eggMap[EggCookTypes.SOFT_BOILED] -> binding.radioGroupEggCookType.check(R.id.radioButtonSoftCooked)
+                eggMap[EggCookTypes.MEDIUM_BOILED] -> binding.radioGroupEggCookType.check(R.id.radioButtonMediumCooked)
+                eggMap[EggCookTypes.HARD_BOILED] -> binding.radioGroupEggCookType.check(R.id.radioButtonHardCooked)
             }
         }
 
