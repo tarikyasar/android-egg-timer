@@ -13,7 +13,6 @@ platform :android do
             release_notes: "Lots of amazing new features to test out!",
             firebase_cli_token: options[:firebase_token],
             android_artifact_type: "APK",
-            testers: "m.tarikyasar@gmail.com"
         )
        end
 
