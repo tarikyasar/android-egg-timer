@@ -1,6 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="300dp"
-    android:layout_height="240dp"
+    android:layout_height="300dp"
     android:background="?attr/colorSurface"
     android:orientation="vertical"
     android:paddingVertical="20dp">
@@ -16,12 +16,13 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonClose"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
         android:layout_gravity="center"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/bg_button"
+        android:elevation="24dp"
         android:text="@string/close"
         android:textAllCaps="false"
         android:textSize="24sp" />
