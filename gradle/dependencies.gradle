@@ -1,0 +1,44 @@
+apply from: rootProject.file('gradle/dependency-definitions.gradle')
+
+def versions = [
+        core_ktx        : '1.7.0',
+        appcompat       : '1.4.2',
+        material        : '1.6.1',
+        constraintlayout: '2.1.4',
+        legacy_support  : '1.0.0',
+        livedata_ktx    : '2.5.1',
+        viewmodel_ktx   : '2.5.1',
+        junit           : '4.13.2',
+
+        junit_test      : '1.1.3',
+        espresso        : '3.4.0',
+
+        neumorphism     : '1.0.0-alpha01'
+]
+
+def dependencies = [
+        support    : [
+                core_ktx        : implementation("androidx.core:core-ktx:$versions.core_ktx"),
+                appcompat       : implementation("androidx.appcompat:appcompat:$versions.appcompat"),
+                material        : implementation("com.google.android.material:material:$versions.material"),
+                constraintlayout: implementation("androidx.constraintlayout:constraintlayout:$versions.constraintlayout"),
+                legacy_support  : implementation("androidx.legacy:legacy-support-v4:$versions.legacy_support"),
+                livedata_ktx    : implementation("androidx.lifecycle:lifecycle-livedata-ktx:$versions.livedata_ktx"),
+                viewmodel_ktx   : implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.viewmodel_ktx"),
+        ],
+
+        test       : [
+                junit     : testImplementation("junit:junit:$versions.junit"),
+                junit_test: androidTestImplementation("androidx.test.ext:junit:$versions.junit_test"),
+                espresso  : androidTestImplementation("androidx.test.espresso:espresso-core:$versions.espresso"),
+        ],
+
+
+        neumorphism: implementation("com.github.Borutsky:neumorphism-android:$versions.neumorphism"),
+]
+
+ext.appDependencies = [
+        dependencies.support,
+        dependencies.test,
+        dependencies.neumorphism
+]

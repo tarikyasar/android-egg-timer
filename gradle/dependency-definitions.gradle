@@ -1,0 +1,91 @@
+ext.addDependencies = { DependencyHandler handler, dependencyArray ->
+    getDependencies(dependencyArray).each {
+        if (it.options != null) {
+            handler.add(it.config, it.notation, it.options)
+        } else {
+            handler.add(it.config, it.notation)
+        }
+    }
+}
+
+static def getDependencies(holder) {
+    def dependencies = new ArrayList<Dependency>()
+
+    if (holder instanceof Dependency) {
+        dependencies.add(holder)
+    } else if (holder instanceof Map) {
+        holder.values().each {
+            dependencies.addAll(getDependencies(it))
+        }
+    } else if (holder instanceof List) {
+        holder.each {
+            dependencies.addAll(getDependencies(it))
+        }
+    }
+
+    return dependencies
+}
+
+ext.classpath = { notation ->
+    new Dependency('classpath', notation)
+}
+
+ext.implementation = { notation, options = null ->
+    new Dependency('implementation', notation, options)
+}
+
+ext.compileOnly = { notation ->
+    new Dependency('compileOnly', notation)
+}
+
+ext.runtimeOnly = { notation ->
+    new Dependency('runtimeOnly', notation)
+}
+
+ext.annotationProcessor = { notation ->
+    new Dependency('annotationProcessor', notation)
+}
+
+ext.kapt = { notation ->
+    new Dependency('kapt', notation)
+}
+
+ext.api = { notation ->
+    new Dependency('api', notation)
+}
+
+ext.embed = { notation, options = null ->
+    new Dependency('embed', notation, options)
+}
+
+ext.shadow = { notation, options = null ->
+    new Dependency('shadow', notation, options)
+}
+
+ext.testImplementation = { notation ->
+    new Dependency('testImplementation', notation)
+}
+
+ext.androidTestImplementation = { notation ->
+    new Dependency('androidTestImplementation', notation)
+}
+
+ext.kaptTest = { notation ->
+    new Dependency('kaptTest', notation)
+}
+
+ext.kaptAndroidTest = { notation ->
+    new Dependency('kaptAndroidTest', notation)
+}
+
+class Dependency {
+    def config
+    def notation
+    def options
+
+    Dependency(config, notation, options = null) {
+        this.config = config
+        this.notation = notation
+        this.options = options
+    }
+}
